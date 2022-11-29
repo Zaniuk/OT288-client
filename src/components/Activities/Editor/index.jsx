@@ -32,7 +32,7 @@ export default function Editor() {
     });
   };
   const [data, setData] = useState({});
-  const [sucess, setSucess] = useState(false);
+  let sucess = false;
   const [error, setError] = useState(false);
   const [showLengthError, setShowLengthError] = useState(false);
   const [edit, setEdit] = useState("CREATE");
@@ -173,7 +173,7 @@ export default function Editor() {
            <input hidden accept="image/*" type="file" />
           </Button>
           {image && <Typography>Preview: </Typography>}
-          <img src={image}/>
+          <img src={image} alt ="preview"/>
         </Box>
         {showLengthError && 
           <Box>

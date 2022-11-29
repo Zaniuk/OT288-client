@@ -13,7 +13,6 @@ import '@fontsource/poppins';
 import '@fontsource/mulish';
 import '@fontsource/montserrat';
 import { Link } from "react-router-dom";
-import Logo from '../../components/Header/Logo'
 export default function Footer(){
     const [data, setData] = useState("");
     useEffect(() => {

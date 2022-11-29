@@ -39,7 +39,7 @@ export default function Organization(){
     };
 
     const showAlertCreate = ()=>{
-        if(name, image, description, rol){
+        if(name && image && description && rol){
             Swal.fire({
             title: '¿Quieres agregar un nuevo miembro?',
             icon: 'question',
@@ -60,7 +60,7 @@ export default function Organization(){
     }
 
     const showAlertUpdate = (_id)=>{
-        if(name, image, description, rol){
+        if(name && image && description && rol){
             Swal.fire({
             title: '¿Quieres actualizar los datos del miembro?',
             icon: 'question',
@@ -95,7 +95,7 @@ export default function Organization(){
     useEffect(()=>{
         getData(id);
         document.getElementById("form").onsubmit = ()=>{return false;};
-    },[]);
+    },[id]);
 
     return(
         <Box component="form" id= "form" sx={{

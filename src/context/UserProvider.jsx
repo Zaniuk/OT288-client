@@ -1,4 +1,4 @@
-import React, { createContext, useCallback, useEffect, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import httpService from "../services/httpService";
 export const UserContext = createContext();
 
@@ -58,7 +58,7 @@ const UserProvider = ({ children }) => {
       }
       setUser(data.user);
     } catch (e) {
-      console.log(e);
+      console.log();
     }
   };
 

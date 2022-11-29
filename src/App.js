@@ -32,7 +32,6 @@ import Testimonial from "./routes/private/Testimonial";
 import Contacts from "./routes/private/Contacts";
 import Member from "./routes/private/Member"
 import Categories from "./routes/private/Categories";
-import Slide from "./routes/private/Slide";
 import Organization from "./routes/private/Organization";
 import PublicActivities from "./routes/public/PublicActivities";
 import PublicActivity from "./routes/public/PublicActivity";

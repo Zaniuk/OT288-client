@@ -6,7 +6,7 @@ import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Typography from "@mui/material/Typography";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { UserContext } from "../../context/UserProvider";
 import { useContext } from "react";
 const adminSettings = [
@@ -16,9 +16,9 @@ const adminSettings = [
     route: '/backoffice'
   }
 ]
-export default function ProfileButton({}) {
+export default function ProfileButton() {
   const {user, isAdmin, logout} = useContext(UserContext)
-  const navigate = useNavigate()
+
     const handleOpenUserMenu = (event) => {
         setAnchorElUser(event.currentTarget);
       };

@@ -75,7 +75,7 @@ export default function Cover() {
             <img
               // src={process.env.PUBLIC_URL + "/images/blog-img-02.jpg"}
               src={data.welcomeImage}
-              alt="cover image"
+              alt="cover"
             />
           </Box>
         </Grid>
