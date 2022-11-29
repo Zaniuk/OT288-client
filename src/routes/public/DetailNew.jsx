@@ -12,12 +12,13 @@ export default function DetailNew() {
   const widthMatches = useMediaQuery("(min-width:600px)");
   const navigate = useNavigate();
 
-  async function getData() {
-    const res = await axios.get(`/news/${id}`);
-    setData(res.data.data);
-  }
+  
 
   useEffect(() => {
+    async function getData() {
+      const res = await axios.get(`/news/${id}`);
+      setData(res.data.data);
+    }
     getData();
   }, [id]);
 

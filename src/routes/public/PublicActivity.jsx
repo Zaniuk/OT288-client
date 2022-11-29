@@ -6,14 +6,15 @@ import parse from 'html-react-parser'
 export default function PublicActivity() {
     const [activity, setActivity] = useState({})
     const {id} = useParams()
-    const getData = async () => {
-        const res = await httpService.get(`/activities/${id}`)
-        setActivity(res.data)
-    }
+    
 
     useEffect(() => {
+        const getData = async () => {
+            const res = await httpService.get(`/activities/${id}`)
+            setActivity(res.data)
+        }
         getData()
-    }, [])
+    }, [id])
   return (
     <Box>
         <Box sx={{
