@@ -58,7 +58,7 @@ export default function FormSlides(){
     }
 
     const showAlertUpdate = ()=>{
-        if(slide1Img, slide2Img, slide3Img, slide4Img, slide1Text, slide2Text, slide3Text, slide4Text){
+        if(slide1Img && slide2Img && slide3Img && slide4Img && slide1Text && slide2Text && slide3Text && slide4Text){
             Swal.fire({
             title: '¿Quieres actualizar el contenido de los Slides?',
             icon: 'question',
@@ -72,7 +72,7 @@ export default function FormSlides(){
                     const res3 = await axios.put(`/slides/3`, { imageUrl: slide3Img,  text: slide3Text });
                     const res4 = await axios.put(`/slides/4`, { imageUrl: slide4Img,  text: slide4Text });
 
-                    if(res1,res2,res3,res4){
+                    if(res1 && res2 && res3 && res4){
                     Swal.fire('Actualizada', 'Los Slides han sido actualizados.', 'success')
                     }else{
                     Swal.fire('Hubo un problema', 'Los slides no se pudieron actualizar', 'error')

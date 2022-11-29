@@ -47,7 +47,7 @@ export default function NewsForm() {
       }).then(async (result) => {
         if (result.isConfirmed) {
           try {
-	            const res = await axios.post(`/news`, {
+	            await axios.post(`/news`, {
 	            name: name,
 	            content: content,
 	            image: image,
@@ -113,7 +113,7 @@ export default function NewsForm() {
     document.getElementById("form").onsubmit = () => {
       return false;
     };
-  }, []);
+  }, [id]);
 
   return (
     <Box

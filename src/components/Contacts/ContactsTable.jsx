@@ -39,7 +39,7 @@ export default function ContactTable() {
         console.error(e);
       }
     })();
-  }, []);
+  }, [data]);
   return (
     <>
       <Box

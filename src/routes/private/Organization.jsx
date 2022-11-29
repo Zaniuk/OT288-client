@@ -82,7 +82,7 @@ export default function Organization(){
     };
 
     const showAlertUpdate = ()=>{
-        if(title, logo){
+        if(title && logo){
             Swal.fire({
             title: '¿Quieres actualizar los datos de la organización?',
             icon: 'question',
