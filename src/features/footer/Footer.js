@@ -5,14 +5,15 @@ import {
     Typography,
     Divider,
     Box,
-    Stack
+    Stack,
+    Paper
 }from "@mui/material";
 import httpService from '../../services/httpService';
 import '@fontsource/poppins';
 import '@fontsource/mulish';
 import '@fontsource/montserrat';
 import { Link } from "react-router-dom";
-
+import Logo from '../../components/Header/Logo'
 export default function Footer(){
     const [data, setData] = useState("");
     useEffect(() => {
@@ -27,11 +28,12 @@ export default function Footer(){
     }, [])
    
     return(
-            <Container  sx = {{backgroundColor: "#C0C0C0", display: "flex", flexDirection: "column", height: "450px", mt: '1.5rem'}} maxWidth ={false}>
+            <Container  component={Paper} elevation={6} sx = {{backgroundColor: '#ECECEC', display: "flex", flexDirection: "column", height: "450px", mt: '5rem'}} maxWidth ={false}>
                 <Box sx = {{mt: 2}}>
                     <Divider>
                         <Box>
-                            <Box component ="img" sx = {{width: 80, height: 80, mx: 6}} src = {data?.image} alt ="logo"/>
+                            <Box component ="img" sx = {{width: 'auto', height: 60, mx: 6}} src = {data?.image} alt ="logo"/>
+                            {/* <Logo/> */}
                             <Typography variant = "h6" sx= {{fontSize: 18, fontFamily: "Poppins, sans-serif"}}>{data?.title}</Typography>
                         </Box>
                     </Divider>
